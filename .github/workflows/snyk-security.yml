@@ -21,9 +21,6 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
-      - name: Snyk Open Source monitor
-        run: snyk monitor --all-projects
-
       - name: Snyk IaC test and report
         run: snyk iac test --report || true
 
